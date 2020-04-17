@@ -67,7 +67,7 @@ fi
 #dpkg-buildpackage -b
 
 cd /tmp
-dpkg -i dump1090-mutability_1.15~dev_amd64.deb << EOF
+dpkg -i dump1090*.deb << EOF
 no
 EOF
 
