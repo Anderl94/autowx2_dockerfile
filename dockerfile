@@ -48,7 +48,7 @@ RUN apt-get install -y vim-tiny procps net-tools
 ADD ./default /etc/nginx/sites-enabled/
 
 ADD ./patch.sh /
-RUN /patch.sh
+RUN ["chmod", "+x", "/patch.sh"]
 #RUN rm -f /patch.sh
 
 ADD ./Picadddatetime.py /autowx2/bin/
