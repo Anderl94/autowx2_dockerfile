@@ -1,5 +1,5 @@
 #!/bin/bash
-set -euo pipefail
+#set -euo pipefail
 export PYTHONIOENCODING=utf-8
 
 if [[ ! -f /config/autowx2_conf.py ]] ; then
