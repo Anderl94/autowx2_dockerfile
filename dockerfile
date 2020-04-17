@@ -55,5 +55,6 @@ ADD ./Picadddatetime.py /autowx2/bin/
 
 VOLUME [ "/config" ]
 ADD ./autowx2.sh /
+RUN ["chmod", "+x", "/autowx2.sh"]
 CMD [ "/autowx2.sh","run" ]
 EXPOSE 5050
