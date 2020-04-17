@@ -4,7 +4,7 @@ FROM debian:stretch-slim
 RUN apt-get update -y
 RUN apt-get install -y git wget sudo make gcc python python-pip qt5-default cron nginx-light
 WORKDIR /
-RUN git clone --depth 1 https://github.com/filipsPL/autowx2.git -b devel-new-config
+RUN git clone --depth 1 https://github.com/Anderl94/autowx2.git -b devel-new-config
 WORKDIR /autowx2
 RUN chmod +x ./*.sh ./bin/*.sh
 RUN ./install.sh
