@@ -5,6 +5,8 @@
 #	echo Patch Flask Start Command successful.
 #fi
 
+rtl-sdr_dongle=13
+
 sed -i 's/#gzip on/gzip on/g' /etc/nginx/nginx.conf
 
 sed -i 's/sessions\s*required\s*pam_loginuid\.so/#session required pam_loginuid\.so/g' /etc/pam.d/cron
@@ -20,6 +22,11 @@ sed -i 's/text\/plain/text\/css/g' /etc/nginx/mime.types
 sed -i 's/tempdir="\/tmp"/tempdir="\/dev\/shm"/g' /autowx2/bin/dump1090-draw_heatmap.sh
 
 echo '$baseDir/bin/gen-static-page.sh' >> /autowx2/modules/iss/iss_voice_mp3.sh
+
+cp /autowx2/modules/noaa/noaa.conf.example /autowx2/modules/noaa/noaa.conf
+
+cp /autowx2/modules/noaa/noaa.conf.example /autowx2/modules/meteor/meteor.conf
+
 
 #sed -i 's/heatmap-osm.jpg/heatmap-osm.png/g' /autowx2/bin/gen-static-page.sh
 #sed -i 's/heatmap-osm2.jpg/heatmap-osm2.png/g' /autowx2/bin/gen-static-page.sh
