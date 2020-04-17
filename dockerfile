@@ -13,15 +13,15 @@ RUN git clone https://github.com/asdil12/pymultimonaprs.git
 WORKDIR /autowx2/pymultimonaprs
 RUN python setup.py install
 #https://github.com/filipsPL/autowx2/wiki/meteor-m2
-RUN wget -P /tmp http://www.5b4az.org/pkg/lrpt/mlrpt-1.6.2.tar.bz2
+RUN wget -P /tmp http://www.5b4az.org/pkg/lrpt/mlrpt-1.6.4.tar.bz2
 WORKDIR /tmp
-RUN tar -xvf mlrpt-1.6.2.tar.bz2
-WORKDIR /tmp/mlrpt-1.6.2
+RUN tar -xvf mlrpt-1.6.4.tar.bz2
+WORKDIR /tmp/mlrpt-1.6.4
 RUN ./autogen.sh && ./configure && make && make install
 #./configure CFLAGS="-g -O2"
 RUN cp -r mlrpt /root
 WORKDIR /tmp
-RUN rm -rf mlrtp-1.6.2
+RUN rm -rf mlrtp-1.6.4
 
 RUN apt-get install -y cmake doxygen debhelper
 WORKDIR /tmp
